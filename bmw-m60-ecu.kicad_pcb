@@ -166,7 +166,10 @@ component "dinput4" "LM339_SOIC14" at 15000 20000 0
   connect "IAT_BANK2" "IAT_BANK2"
   connect "CLT" "CLT"
   connect "OIL" "OIL"
-  connect "KNOCK" "KNOCK"
+  connect "KNOCK_1" "KNOCK_1"
+connect "KNOCK_2" "KNOCK_2"
+connect "KNOCK_3" "KNOCK_3"
+connect "KNOCK_4" "KNOCK_4"
   connect "3V3" "3V3"
   connect "GND" "GND"
 
