@@ -50,3 +50,123 @@ test_pad_4 { net "12V" at 10000 10000 size 2.5 }
 test_pad_label { font "Default" size 0.8 }"
 
 [notes]
+# Module placements (auto-generated)
+
+# mega-mcu144 (center-left) - Main MCU
+component "mega-mcu144" "STM32H144_QFN64" at 30000 50000 0
+  orientation 0
+  place "U1"
+  sheet "bmw-m60-ecu"
+  connect "5V" "5V"
+  connect "3V3" "3V3"
+  connect "GND" "GND"
+  connect "PA0" "INJ_1"
+  connect "PA1" "INJ_2"
+  connect "PA2" "INJ_3"
+  connect "PA3" "INJ_4"
+  connect "PA4" "TPS_BANK1"
+  connect "PA5" "TPS_BANK2"
+  connect "PA6" "MAP"
+  connect "PA7" "IAT_BANK1"
+  connect "PB0" "IGN_1"
+  connect "PB1" "IGN_2"
+  connect "PB2" "IGN_3"
+  connect "PB3" "IGN_4"
+  connect "PB4" "IGN_5"
+  connect "PB5" "IGN_6"
+  connect "PB6" "IGN_7"
+  connect "PB7" "IGN_8"
+  connect "PB12" "BATT_SENSE"
+  connect "PB13" "CAN_H"
+  connect "PB14" "CAN_L"
+  connect "PA9" "AUX_TX"
+  connect "PA10" "AUX_RX"
+
+# power12-and-5 (left side) - Power regulation
+component "power12-and-5" "TL115D0EJXUMA1" at 15000 80000 0
+  orientation 0
+  place "U2"
+  sheet "bmw-m60-ecu"
+  connect "VIN" "VIN"
+  connect "5V" "5V"
+  connect "3V3" "3V3"
+  connect "12V" "12V"
+  connect "GND" "GND"
+
+# output (bottom center) - Injector drivers
+component "output" "AUIPS2041LTR" at 60000 10000 0
+  orientation 0
+  place "U3"
+  sheet "bmw-m60-ecu"
+  connect "INJ_1" "INJ_1"
+  connect "INJ_2" "INJ_2"
+  connect "INJ_3" "INJ_3"
+  connect "INJ_4" "INJ_4"
+  connect "INJ_5" "INJ_5"
+  connect "INJ_6" "INJ_6"
+  connect "INJ_7" "INJ_7"
+  connect "INJ_8" "INJ_8"
+  connect "GND" "GND"
+
+# ign8 (bottom center) - Ignition coil drivers
+component "ign8" "IRFZ48N_NTO220" at 60000 30000 0
+  orientation 0
+  place "U4"
+  sheet "bmw-m60-ecu"
+  connect "IGN_1" "IGN_1"
+  connect "IGN_2" "IGN_2"
+  connect "IGN_3" "IGN_3"
+  connect "IGN_4" "IGN_4"
+  connect "IGN_5" "IGN_5"
+  connect "IGN_6" "IGN_6"
+  connect "IGN_7" "IGN_7"
+  connect "IGN_8" "IGN_8"
+  connect "12V" "12V"
+  connect "GND" "GND"
+
+# vr (top center) - VR conditioning
+component "vr" "MAX9926" at 60000 90000 0
+  orientation 0
+  place "U5"
+  sheet "bmw-m60-ecu"
+  connect "VR_CRK_BANK1" "VR_CRK_BANK1"
+  connect "VR_CAM_BANK1" "VR_CAM_BANK1"
+  connect "VR_CRK_BANK2" "VR_CRK_BANK2"
+  connect "VR_CAM_BANK2" "VR_CAM_BANK2"
+  connect "GND" "GND"
+
+# wbo (top right) - Wideband O2 modules
+component "wbo" "BTS3028_SOIC8" at 90000 85000 0
+  orientation 0
+  place "U6"
+  sheet "bmw-m60-ecu"
+  connect "WBO1_DATA" "WBO1_DATA"
+  connect "WBO2_DATA" "WBO2_DATA"
+  connect "3V3" "3V3"
+  connect "GND" "GND"
+
+# can (right side) - CAN transceiver
+component "can" "SN65HVD230" at 105000 50000 0
+  orientation 0
+  place "U7"
+  sheet "bmw-m60-ecu"
+  connect "CAN_H" "CAN_H"
+  connect "CAN_L" "CAN_L"
+  connect "GND" "GND"
+
+# dinput4 (left side) - Input conditioning
+component "dinput4" "LM339_SOIC14" at 15000 20000 0
+  orientation 0
+  place "U8"
+  sheet "bmw-m60-ecu"
+  connect "TPS_BANK1" "TPS_BANK1"
+  connect "TPS_BANK2" "TPS_BANK2"
+  connect "MAP" "MAP"
+  connect "IAT_BANK1" "IAT_BANK1"
+  connect "IAT_BANK2" "IAT_BANK2"
+  connect "CLT" "CLT"
+  connect "OIL" "OIL"
+  connect "KNOCK" "KNOCK"
+  connect "3V3" "3V3"
+  connect "GND" "GND"
+
