@@ -1,0 +1,5 @@
+# removal example: R66006 would be removed from BOM
+R66006,
+
+# replacement example - replace specific fuse part number
+F42333310,"nSMD050-24V","SMD1206","C70076"
