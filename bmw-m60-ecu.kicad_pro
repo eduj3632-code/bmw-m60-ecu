@@ -1,0 +1,67 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {},
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {},
+      "track_widths": [],
+      "via_dimensions": []
+    }
+  },
+  "boards": [],
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "bmw-m60-ecu.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "power",
+        "after_route_clearance": 0.3,
+        "width": 0.5
+      },
+      {
+        "name": "signal",
+        "after_route_clearance": 0.2,
+        "width": 0.3
+      },
+      {
+        "name": "high_speed",
+        "after_route_clearance": 0.25,
+        "width": 0.3
+      },
+      {
+        "name": "can_bus",
+        "after_route_clearance": 0.3,
+        "width": 0.3
+      },
+      {
+        "name": "analog",
+        "after_route_clearance": 0.3,
+        "width": 0.3
+      },
+      {
+        "name": "high_voltage",
+        "after_route_clearance": 0.5,
+        "width": 0.5
+      }
+    ],
+    "meta": {
+      "version": 0
+    }
+  },
+  "pcbnew": {
+    "page_layout_descr_file": ""
+  },
+  "sheets": [],
+  "text_variables": {
+    "PLOT_TEXT_SIZE": "0.3",
+    "SHEET_SIZE": "A4",
+    "SHEET_ORIENTATION": "PORTRAIT"
+  }
+}

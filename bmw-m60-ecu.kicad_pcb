@@ -1,0 +1,52 @@
+# KiCad PCB file generated for BMW M60 ECU
+# Hellen-One modular architecture
+# Version: 0.1
+
+version=1
+last_client=pcbnew
+
+[pcbnew]
+# units nm
+0 1
+
+[general]
+sheet_name "bmw-m60-ecu"
+title "BMW M60 V8 Engine Management ECU"
+description "Hellen-One modular ECU board for BMW M60 V8 engine"
+date "2026-11-11"
+
+[layers]
+# Copper layers
+copper_f "Top Copper"
+copper_b "Bottom Copper"
+nets_f "Top Overlay"
+nets_b "Bottom Overlay"
+nomen_f "Top Silkscreen"
+nomen_b "Bottom Silkscreen"
+rout_f "Top Route"
+rout_b "Bottom Route"
+inner_1 "Inner Layer 1"
+inner_2 "Inner Layer 2"
+inner_3 "Inner Layer 3"
+inner_4 "Inner Layer 4"
+pth_f "Through-Hole Filler"
+pth_b "Through-Hole Filler"
+
+[net_classes]
+net_class power { after_route_clearance 0.3 width 0.5 }
+net_class signal { after_route_clearance 0.2 width 0.3 }
+net_class high_speed { after_route_clearance 0.25 width 0.3 }
+net_class can_bus { after_route_clearance 0.3 width 0.3 }
+net_class analog { after_route_clearance 0.3 width 0.3 }
+net_class high_voltage { after_route_clearance 0.5 width 0.5 }
+
+[test_pads]
+# Test points for GND, 3.3V, 5V, 12V
+# These are placed at corners for probe access
+test_pad_1 { net "GND" at 0 0 size 2.5 }
+test_pad_2 { net "5V" at 10000 0 size 2.5 }
+test_pad_3 { net "3V3" at 0 10000 size 2.5 }
+test_pad_4 { net "12V" at 10000 10000 size 2.5 }
+test_pad_label { font "Default" size 0.8 }"
+
+[notes]

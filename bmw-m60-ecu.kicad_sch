@@ -1,0 +1,103 @@
+#! Eagle schematic via KiCad 10
+# Board: bmw-m60-ecu
+# Design: BMW M60 V8 Engine Management ECU
+# Module: Hellen-One modular architecture
+# Revision: A
+# Created: 2026-11-11
+
+(version 20240801)
+
+(sheet 1 1 1
+  # "bmw-m60-ecu"
+  # ""
+  # "Title Block"
+  tedit 7800175
+  # Created: 2026-11-11
+  # Rules: {}
+  # Page Size: A4
+  # Page Orientation: Portrait
+  at 0 0 0 1
+  # Hierarchical sheet name
+  # Title block fields
+  # Sheet: bmw-m60-ecu
+  # Project: bmw-m60-ecu
+  # Revision: A
+  # Date: 2026-11-11
+  # Designer: auto-generated
+)
+
+(cell 0 0 0 "POWER" "Power & Supply"
+  # Power input pins
+  # Pin 1: VIN (12V battery)
+  # Pin 2: GND (chassis ground)
+  # Pin 3: 5V_OUT (regulated 5V)
+  # Pin 4: 3V3_OUT (regulated 3.3V)
+  # Pin 5: IGN_V (ignition switched 12V)
+  # Pin 6: CAN_H (CAN high)
+  # Pin 7: CAN_L (CAN low)
+  # Pin 8: SW_PIN (switch/wake input)
+)
+
+(cell 0 1 0 "INJECTOR" "Fuel Injectors - 8x Low-Side"
+  # Injector driver output pins
+  # Pin 1: INJ_1 (fuel injector 1)
+  # Pin 2: INJ_2 (fuel injector 2)
+  # Pin 3: INJ_3 (fuel injector 3)
+  # Pin 4: INJ_4 (fuel injector 4)
+  # Pin 5: INJ_5 (fuel injector 5)
+  # Pin 6: INJ_6 (fuel injector 6)
+  # Pin 7: INJ_7 (fuel injector 7)
+  # Pin 8: INJ_8 (fuel injector 8)
+)
+
+(cell 0 2 0 "IGNITION" "Ignition Coils - 8x Coil-on-Plug"
+  # Ignition coil driver pins
+  # Pin 1: IGN_1 (cylinder 1 coil)
+  # Pin 2: IGN_2 (cylinder 2 coil)
+  # Pin 3: IGN_3 (cylinder 3 coil)
+  # Pin 4: IGN_4 (cylinder 4 coil)
+  # Pin 5: IGN_5 (cylinder 5 coil)
+  # Pin 6: IGN_6 (cylinder 6 coil)
+  # Pin 7: IGN_7 (cylinder 7 coil)
+  # Pin 8: IGN_8 (cylinder 8 coil)
+)
+
+(cell 0 3 0 "SENSING" "Sensors & Triggers"
+  # VR / Trigger inputs
+  # Pin 1: VR_CRK_BANK1 (crank sensor bank 1)
+  # Pin 2: VR_CAM_BANK1 (cam sensor bank 1)
+  # Pin 3: VR_CRK_BANK2 (crank sensor bank 2)
+  # Pin 4: VR_CAM_BANK2 (cam sensor bank 2)
+  # Pin 5: TPS_BANK1 (throttle position bank 1)
+  # Pin 6: TPS_BANK2 (throttle position bank 2)
+  # Pin 7: MAP (manifold absolute pressure)
+  # Pin 8: IAT_BANK1 (intake air temp bank 1)
+  # Pin 9: IAT_BANK2 (intake air temp bank 2)
+  # Pin 10: CLT (coolant temperature)
+  # Pin 11: OIL (oil temperature)
+  # Pin 12: WBO1_DATA (wideband O2 bank 1)
+  # Pin 13: WBO2_DATA (wideband O2 bank 2)
+  # Pin 14: SPARE_1 (general purpose)
+  # Pin 15: SPARE_2 (general purpose)
+)
+
+(cell 0 4 0 "COMM" "Communication & Debug"
+  # Communication pins
+  # Pin 1: AUX_TX (UART TX to TunerStudio)
+  # Pin 2: AUX_RX (UART RX from TunerStudio)
+  # Pin 3: AUX_ENABLE (auxiliary device enable)
+  # Pin 4: DEBUG_CLK (SWO debug clock)
+  # Pin 5: DEBUG_SWO (debug data line)
+)
+
+(cell 1 0 0 "MODULES" "Hellen-One Module References"
+  # Module references on this sheet
+  # MCU: mega-mcu144 (STM32H144, center of board)
+  # VR: vr module (4x VR conditioning, top center)
+  # WBO: wbo module (2x wideband, top right)
+  # Power: power12-and-5 (left side, 5V/12V regulation)
+  # Output: output + ign8 (bottom center, injectors + coils)
+  # CAN: can module (right side, transceiver + connector)
+  # Input: dinput4 + knock (left side, TPS/MAP/IAT/CLT/OIL/knock)
+  # Connectors: 144-pin automotive edge connector
+)
